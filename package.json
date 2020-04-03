@@ -9,7 +9,8 @@
   "main": "app.js",
   "dependencies": {
     "express": "^4.12.3",
-    "swagger-express-mw": "^0.1.0"
+    "swagger-express-mw": "^0.1.0",
+    "snyk": "^1.305.0"
   },
   "devDependencies": {
     "should": "^7.1.0",
@@ -17,6 +18,9 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "swagger project test"
-  }
+    "test": "swagger project test",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
+  },
+  "snyk": true
 }
