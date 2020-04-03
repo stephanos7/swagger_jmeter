@@ -1,5 +1,5 @@
 'use strict'
-
+var monitor = require("../helpers/monitor")
 var todos = [
     {
       todoId:0,
@@ -20,11 +20,13 @@ var todos = [
   ]
 
 function GetAllTodos(req, res, next, err){
+    var start = monitor(); 
     if(err){
       res.send(JSON.stringify(err))
     }
     else{
       res.json(todos)
+      monitor(start, "service : GetAllTodos")
     }
 }
 
