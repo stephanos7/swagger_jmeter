@@ -28,7 +28,7 @@ paths:
       parameters:
         - name: name
           in: query
-          description: The name of the person to whom to say hello
+          description: The na §me of the person to whom to say hello
           required: false
           type: string
       responses:
@@ -46,15 +46,28 @@ paths:
     x-swagger-pipe: swagger_raw
 # complex objects have schema definitions
 definitions:
-  HelloWorldResponse:
-    required:
-      - message
+  Todo:
+    type: "object"
     properties:
-      message:
-        type: string
-  ErrorResponse:
-    required:
-      - message
-    properties:
-      message:
-        type: string
+      todoId:
+        type: "integer"
+        description: "Primary key, unique identifier for TODOs"
+      todoTitle:
+        type: "string"
+        description: "the name of a TODO"
+      dateCreated:
+        type: "string"
+        format: "date-time"
+        description: "Timestamp of when the TODO was created. Created by the server"
+      author:
+        type: "string"
+        description: "user who created the TODO"
+      dueDate:
+        type: "string"
+        format: "date-time"
+        description: "date the TODO must be completed by"
+      completed:
+        type: "boolean"
+        description: "whether the todo has been completed or not"
+        
+        
