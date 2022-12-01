@@ -10,7 +10,7 @@
   "dependencies": {
     "express": "^4.12.3",
     "swagger-express-mw": "^0.1.0",
-    "snyk": "^1.465.0"
+    "snyk": "^1.1064.0"
   },
   "devDependencies": {
     "should": "^7.1.0",
